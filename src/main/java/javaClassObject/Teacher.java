@@ -1,3 +1,5 @@
+package javaClassObject;
+
 public class Teacher {
 
     String teacherName;

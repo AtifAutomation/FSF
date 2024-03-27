@@ -1,7 +1,10 @@
+package javaClassObject;
+
+
 public class BaseClass {
     public static void main(String[] args) {
         School sc1=new School();
-        sc1.schoolName="Delhi Public School";
+        sc1.schoolName="Delhi Public javaClassObject.School";
         sc1.schoolAddress="Kolkata";
         sc1.principalName="Peter";
         sc1.studentCount=200;

@@ -1,3 +1,5 @@
+package javaClassObject;
+
 public class School {
     String schoolName;
     String schoolAddress;
