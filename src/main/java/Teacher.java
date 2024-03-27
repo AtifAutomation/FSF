@@ -1,8 +1,8 @@
 public class Teacher {
 
-    String TeacherName;
+    String teacherName;
 
-    String SubjectName;
+    String subjectName;
 
     public void teach()
     {
