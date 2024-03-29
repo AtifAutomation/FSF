@@ -1,7 +1,7 @@
 public class ConditionalStatement {
     public static void main(String[] args) {
         ConditionalStatement c1=new ConditionalStatement();
-       String res=c1.determineCategory(4,"Male");
+       String res=c1.determineCategory(4,"Female");
         System.out.println(res);
 
     }
@@ -17,7 +17,7 @@ public class ConditionalStatement {
         {
             result="man";
         }
-        else if((age>60) && (gender=="Male") ||(gender=="Female") )
+        else if((age>60)  && (gender=="Female") )
         {
             result="sc";
         }
