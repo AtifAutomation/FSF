@@ -1,7 +1,7 @@
 public class ConditionalStatement {
     public static void main(String[] args) {
         ConditionalStatement c1=new ConditionalStatement();
-       String res=c1.determineCategory(-1,"Male");
+       String res=c1.determineCategory(19,"Male");
         System.out.println(res);
 
     }
