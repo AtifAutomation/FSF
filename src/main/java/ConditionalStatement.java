@@ -1,7 +1,7 @@
 public class ConditionalStatement {
     public static void main(String[] args) {
         ConditionalStatement c1=new ConditionalStatement();
-       String res=c1.determineCategory(61,"Male");
+       String res=c1.determineCategory(-1,"Male");
         System.out.println(res);
 
     }
@@ -9,29 +9,38 @@ public class ConditionalStatement {
     public String determineCategory(int age,String gender)
     {
         String result=null;
-        if((age>0) && (age <=18) && (gender=="Male"))
+        if((age>0) && (age <=18))
         {
-            result="boy";
+            if(gender=="Male")
+            {
+                result="boy";
+            }
+            else if(gender=="Female")
+            {
+                result="girl";
+            }
+
         }
-        else if((age>18) && (age <=60) && (gender=="Male"))
+        else if((age>18) && (age <=60))
         {
-            result="man";
+            if(gender=="Male")
+            {
+                result="man";
+            }
+            else if(gender=="Female")
+            {
+                result="woman";
+            }
         }
-        else if(age>60 )
+        else if(age>60)
         {
             result="sc";
         }
-        else if((age>0) && (age <=18) && (gender=="Female"))
+        else
         {
-            result="girl";
-        }
-        else if((age>=18) && (age <=60) && (gender=="Female"))
-        {
-            result="woman";
-        }
-        else {
             result="Enter correct age and gender";
         }
+
         return result;
     }
 }
