@@ -5,15 +5,17 @@ public class BaseClassSchool {
         System.out.println("***** School Details *****");
         School sc1=new School();
         sc1.schoolName="NES";
-        sc1.teacherCount=50;
+        sc1.schoolteacherCount=50;
         sc1.studentCount=200;
-        sc1.principalName="Daniel";
-        sc1.address="Kolkata";
+        sc1.schoolprincipalName="Daniel";
+        sc1.schoolAddress="Kolkata";
         sc1.displayResult();
+        sc1.displaySchoolDetails();
         System.out.println("***** Teacher Details *****");
         Teacher t1=new Teacher();
         t1.teacherName="Ram";
         t1.teachesSubject="Math";
+        t1.displayTeacherDetails();
         //t1.teach();
         Teacher t2=new Teacher();
         t2.teacherName="Ayush";
@@ -30,7 +32,7 @@ public class BaseClassSchool {
         s2.name="Sana";
         s2.age=12;
         //s2.eat();
-        s2.play();
+        s2.play("Cricket");
         s2.read();
         System.out.println("***** Classroom Details *****");
         ClassRoom c1=new ClassRoom();
@@ -45,6 +47,7 @@ public class BaseClassSchool {
         c3.classFloorNumber=3;
         c3.seatingCapacity=50;
         c3.classClean();
+        c3.classRoomDetails();
 
     }
 }

@@ -5,4 +5,10 @@ public class Teacher {
     {
         System.out.println("My duty is to teach");
     }
+    public void displayTeacherDetails()
+    {
+        System.out.println("Teacher name is "+" "+teacherName);
+        System.out.println("Teacher teaches  "+" "+teachesSubject);
+
+    }
 }

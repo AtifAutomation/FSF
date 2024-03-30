@@ -5,4 +5,8 @@ public class ClassRoom {
     {
         System.out.println("Class is clean");
     }
+    public void classRoomDetails()
+    {
+        System.out.println("Seating capcity :"+" "+seatingCapacity);
+    }
 }
