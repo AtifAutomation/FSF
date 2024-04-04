@@ -1,0 +1,8 @@
+//Class:
+   // 1. Access Specifier of Class can be public and default
+   // 2. Protected and  Private access specifier cannot be applied to class.
+    //Compilation error: Modifier 'protected' not allowed here
+    //Compilation error: Modifier 'private' not allowed here
+
+    //3. When a class is defined as public then visibility is everywhere/ we can access from anywhere.
+    //4. A default class can be accessed within the class only. We cannot access default class outside the package.
