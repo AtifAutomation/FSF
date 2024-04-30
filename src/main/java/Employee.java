@@ -1,53 +1,62 @@
-public class Employee {
-    /*
-      As per requirement specifications this class has 5 instance variable and 2 method
-     */
+public class Employee implements Comparable<Employee>{
+    String empId;
     String name;
-    int age;
-    private float empSalaryMonthly;
-    int empID;
-    boolean isActive;
-    // Creating constructor to assign values to the instance variable of the class.
-    //Use Constructor in Employee class to assign values to the instance variable
-    public Employee(String name,int age,float empSalaryMonthly,int empID,boolean isActive)
+    private int salary;
+    Employee(String empID,String name,int salary)
     {
+        this.empId=empID;
         this.name=name;
-        this.age=age;
-        this.empSalaryMonthly=empSalaryMonthly;
-        this.empID=empID;
-        this.isActive=isActive;
-
+        this.salary=salary;
+    }
+    public String getEmpId()
+    {
+        return this.empId;
+    }
+    public String getName()
+    {
+        return this.name;
+    }
+    public int getSalary()
+    {
+        return this.salary;
+    }
+    public void allDetails()
+    {
+        System.out.println(this.name+"   "+this.empId+"   "+this.salary);
+    }
+    public String toString()
+    {
+        return this.name+" "+this.empId+" "+this.salary;
     }
     /*
-        We need to pass Object reference of Organization class to access all the employee under it
-        and print required details.
+
+         Sorting based on name ascending order.
+        */
+    @Override
+//    public int compareTo(Employee o) {
+//        return this.name.compareTo(o.name);
+//    }
+
+    /*
+
+      Sorting based on salary descending order
      */
-    public void getDetails(Organization PodTest)
+
+    public int compareTo(Employee o)
     {
-        for(Employee e:PodTest.employee)
+        if(this.salary==o.salary)
         {
-            System.out.println("Name :"+e.name+" "+"Employee id "+e.empID+"Age is "+e.age);
+            return 0;
         }
-
+        else if(this.salary<o.salary)
+        {
+            return 1;
+        }
+        else
+        {
+            return -1;
+        }
     }
-    public float getTaxAmountTobePaid()
-    {
-        float taxAmount=0;
-            if(empSalaryMonthly>100000)
-            {
-                taxAmount=taxAmount+(float) (empSalaryMonthly * 0.20);
-            }
-            else
-            {
-                System.out.println("No tax to be Paid "+name);
-            }
 
 
-        return taxAmount;
-
-    }
-    public float getEmpSalary()
-    {
-        return empSalaryMonthly;
-    }
 }
